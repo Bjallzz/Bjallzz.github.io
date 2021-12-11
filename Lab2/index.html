@@ -12,13 +12,13 @@
       <label for="idInput">Numer dowodu osobistego</label>
       <input id="idInput" placeholder="ABC123456" pattern="^[a-zA-Z]{3}\d{6}$" />
       <label for="urlInput">Adres strony internetowej</label>
-      <input id="urlInput" placeholder="https://google.com" pattern="^(((https|http):\/\/)|www\.|[a-zA-Z0-9]+\.)([a-zA-Z0-9]+)(\S+)$" />
+      <input id="urlInput" placeholder="https://google.com" pattern="^(((https?):\/\/)|www\.)?([a-zA-Z0-9]+\.)+([a-zA-Z0-9()@:%_\/\+.~#?&=]+)$" />
       <label for="dateInput">Data</label>
       <input id="dateInput" type="date"/>
       <label for="limitedDateInput">Data w tym tygodniu</label>
       <input id="limitedDateInput" type="date" min="2021-12-06" max="2021-12-10"/>
       <label for="time12HoursFormatInput">Czas w formacie 12 godzinnym</label>
-      <input id="time12HoursFormatInput" type="time" min="00:00:00" max="12:00:00"/>
+      <input id="time12HoursFormatInput" type="text" placeholder="11:15 AM" pattern="^(0\d|1[0-1]|\d):([0-5]\d|0\d)\s?(AM|PM)$" />
       <label for="time24HoursFormatInput">Czas w formacie 24 godzinnym</label>
       <input id="time24HoursFormatInput" type="time"/>
       <label for="colorInput">Kolor</label>
