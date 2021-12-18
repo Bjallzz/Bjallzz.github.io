@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div class="main">
+      <div>
+        <ol>
+          <li ondrop="drop(event)">
+            <input 
+              id='1' 
+              draggable="true" 
+              ondragstart="drag(event)" 
+              ondragover="allowDrop(event)" 
+              value="First" 
+              onkeydown="createNewListElementOnEnter(event)"/>
+          </li>
+          <li ondrop="drop(event)">
+            <input 
+              id='2' 
+              draggable="true" 
+              ondragstart="drag(event)" 
+              ondragover="allowDrop(event)" 
+              value="Second"
+              onkeydown="createNewListElementOnEnter(event)" />
+          </li>
+          <li ondrop="drop(event)">
+            <input 
+              id='3' 
+              draggable="true" 
+              ondragstart="drag(event)"  
+              ondragover="allowDrop(event)" 
+              value="Third"
+              onkeydown="createNewListElementOnEnter(event)" />
+          </li>
+          <li ondrop="drop(event)">
+            <input 
+              id='4' 
+              draggable="true" 
+              ondragstart="drag(event)"  
+              ondragover="allowDrop(event)" 
+              value="Fourth" 
+              onkeydown="createNewListElementOnEnter(event)"/>
+          </li>
+        </ol>
+      </div>
+      <div class="platform">
+        <div class="field">
+          <div class="section" ondrop="dropBlock(event)" ondragover="allowDrop(event)"></div>
+          <div class="section" ondrop="dropBlock(event)" ondragover="allowDrop(event)"></div>
+          <div class="section" ondrop="dropBlock(event)" ondragover="allowDrop(event)"></div>
+          <div class="section" ondrop="dropBlock(event)" ondragover="allowDrop(event)"></div>
+          <div class="section" ondrop="dropBlock(event)" ondragover="allowDrop(event)"></div>
+          <div class="section" ondrop="dropBlock(event)" ondragover="allowDrop(event)"></div>
+          <div class="section" ondrop="dropBlock(event)" ondragover="allowDrop(event)"></div>
+          <div class="section" ondrop="dropBlock(event)" ondragover="allowDrop(event)"></div>
+          <div class="section" ondrop="dropBlock(event)" ondragover="allowDrop(event)"></div>
+          <div class="section" ondrop="dropBlock(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <div class="menu">
+          <button onclick="generateBlock(event)">Generuj klocek</button>
+          <div id="BlockStartingPoint" class="blockStartingPoint"></div>
+        </div>
+      </div>
+  </div>
+  </body>
+</html>
