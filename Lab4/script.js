@@ -9,6 +9,7 @@ function dropBlock(ev) {
     var element = document.getElementById(id);
     var width = element.getBoundingClientRect().width;
     var height = element.getBoundingClientRect().height;
+
     var topLeft = document.elementFromPoint(ev.clientX + parseInt(offset[0],10), ev.clientY + parseInt(offset[1],10));
     var topRight = document.elementFromPoint(ev.clientX + parseInt(offset[0],10) + width, ev.clientY + parseInt(offset[1],10));
     var bottomLeft = document.elementFromPoint(ev.clientX + parseInt(offset[0],10), ev.clientY + parseInt(offset[1],10) + height);
@@ -22,6 +23,7 @@ function dropBlock(ev) {
     {
         return;
     }
+    
     element.style.left = (ev.clientX + parseInt(offset[0],10)) + 'px';
     element.style.top = (ev.clientY + parseInt(offset[1],10)) + 'px';
     ev.preventDefault();
@@ -41,8 +43,8 @@ function generateBlock(ev) {
         block.style.height = '100px';
         block.style.display = 'block';
         block.style.position = 'absolute';
-        block.style.left = '860px';
-        block.style.top = '620px';
+        block.style.left = window.innerWidth - 150 + 'px';
+        block.style.top = window.innerHeight - 125 +'px';
         block.style.width = '100px';
         block.style.backgroundColor = randomColor;
         block.style.justifySelf = 'center';
